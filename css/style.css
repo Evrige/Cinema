@@ -1,1 +1,38 @@
-/* No CSS */
+body {
+  background-color: #621402;
+  width: 100%;
+  color: #fff;
+}
+
+.conteiner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*Header*/
+.header {
+  margin-top: 30px;
+  min-height: 33px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav {
+  display: inline-block;
+}
+
+.header .header__nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header .header__logo {
+  display: inline-block;
+  vertical-align: center;
+}
+
+.header .header__logo img {
+  width: 30px;
+  height: 30px;
+}

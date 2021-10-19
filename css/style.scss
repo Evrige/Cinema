@@ -1,3 +1,30 @@
-.block {
-	background-color: #fff;
+body {
+	background-color: #621402;
+	width: 100%;
+	color: #fff;
+}
+.conteiner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/*Header*/
+.header {
+	margin-top: 30px;
+	min-height: 33px;
+	align-items: center;
+	.header__nav {
+		display: inline-block;
+		ul li {
+			list-style: none;
+			display: inline-block;
+		}
+	}
+	.header__logo {
+		display: inline-block;
+		vertical-align: center;
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
 }
