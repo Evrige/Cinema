@@ -2,37 +2,73 @@ body {
   background-color: #621402;
   width: 100%;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 .conteiner {
-  max-width: 1000px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-/*Header*/
+.bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(98, 20, 2, 0.31)), color-stop(85.62%, #621402)), url(../img/bg.png) no-repeat center;
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url(../img/bg.png) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+/*Header-------------------------------------------------------------------------------------*/
 .header {
   margin-top: 30px;
   min-height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.header .header__nav {
-  display: inline-block;
+.header__nav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.header .header__nav ul li {
+.header__nav ul li {
   list-style: none;
-  display: inline-block;
+  margin-right: 25px;
 }
 
-.header .header__logo {
-  display: inline-block;
-  vertical-align: center;
+.header__nav ul li:last-child {
+  margin-right: 0px;
 }
 
-.header .header__logo img {
+.header__logo img {
   width: 30px;
   height: 30px;
+  margin-right: 57px;
+}
+
+.header__profile {
+  font-size: 16px;
+  margin-right: 0;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__profile-photo img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  margin-left: 11px;
 }
