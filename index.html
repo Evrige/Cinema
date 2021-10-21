@@ -16,47 +16,115 @@
 </head>
 
 <body>
-	<header class="header conteiner">
-		<div class="header__logo">
-			<img src="img/cinemalogo.png" alt="logo">
+	<header class="header">
+		<div class="navbar conteiner">
+			<div class="navbar__logo">
+				<img src="img/cinemalogo.png" alt="logo">
+			</div>
+			<nav class="navbar__nav">
+				<ul class="menu">
+					<li class="menu-item">
+						<a href="#">Главная</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Фильмы</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Кинотеатры</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">События</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">Поддержкаa</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="navbar__profile">
+				<span>Привер, Артур</span>
+				<img src="img/avatars.png" alt="avatar">
+			</div>
 		</div>
-		<nav class="header__nav">
-			<ul>
-				<li>Главная</li>
-				<li>Фильмы</li>
-				<li>Кинотеатры</li>
-				<li>События</li>
-				<li>Поддержка</li>
-			</ul>
-		</nav>
-		<div class="header__profile">
-			<p>Привер, Артур</p>
+		<!-- /.navbar -->
+		<div class="film conteiner">
+			<div class="film-info">
+				<small class="film-name__en">Avengers: Infinity War</small>
+				<h1 class="film-name__ru">Мстители: война бесконечности</h1>
+				<p class="film-description">
+					Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы
+					справиться один супергерой, новая угроза возникает из космоса: Танос. Межгалактический тиран преследует
+					цель
+					собрать все шесть Камней Бесконечности - артефакты невероятной силы, с помощью которых можно менять
+					реальность по своему желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту – судьба Земли
+					никогда ещё не была столь неопределённой.
+				</p>
+				<div class="more-info">
+					<div class="more-info__content time">
+						<img src="img/clock.png" alt="clock">
+						<span>240 мин.</span>
+					</div>
+					<div class="more-info__content raiting">
+						<img src="img/imdp.png" alt="imdb-raiting">
+						<span>9.2 / 10</span>
+					</div>
+				</div>
+				<!-- /.more-info -->
+			</div>
+			<!-- /.film-info -->
+			<a class="play-button" href="#"><img src="img/playbutton.png" alt="play-button"></a>
 		</div>
-		<div class="header__profile-photo">
-			<img src="img/avatars.png" alt="avatar">
-		</div>
-		<div class="bg"> </div>
-	</header>
-	<main class="page conteiner">
-		<div class="main-block">
-			<div class="main-block__body">
-				<p>Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы
-					справиться
-					один супергерой, новая угроза возникает из космоса: Танос. Межгалактический тиран преследует цель собрать
-					все
-					шесть Камней Бесконечности - артефакты невероятной силы, с помощью которых можно менять реальность по
-					своему
-					желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту – судьба Земли никогда ещё не была
-					столь
-					неопределённой.</p>
+		<!-- /.film -->
+		<div class="session conteiner">
+			<div class="session-date">
+				<span clas="session-date__label">Дата</span>
+				<div class="block">
+					<div class="day">
+						<span class="day__month">АПР</span>
+						<span class="day__text">27</span>
+						<smspanall class="day__corent">ПТ</smspanall>
+					</div>
+					<div class="day">
+						<span class="day__month">АПР</span>
+						<span class="day__text">27</span>
+						<span class="day__corent">СБ</span>
+					</div>
+					<div class="day">
+						<span class="day__month">АПР</span>
+						<span class="day__text">29</span>
+						<span class="day__corent">ВС</span>
+					</div>
+					<div class="day">
+						<span class="day__month">АПР</span>
+						<span class="day__text">30</span>
+						<span class="day__corent">ПН</span>
+					</div>
+				</div>
+			</div>
+			<div class="session__city">
+				<span>Кинотеатр</span>
+				<div class="block">
+					<select type="text" name="cinema" class="where-take">
+						<option value="1">Аполло</option>
+						<option value="2">Dafi</option>
+						<option value="3">Мост</option>
+					</select>
+				</div>
 
 			</div>
-
-
+			<div class="session__time">
+				<span>Время</span>
+				<div class="block">
+					<select type="text" name="time" class="time-take">
+						<option value="1">18:00</option>
+						<option value="2">20:00</option>
+						<option value="3">23:00</option>
+					</select>
+				</div>
+			</div>
 		</div>
+		<!-- /.data -->
+	</header>
 
-
-	</main>
 </body>
 
 
