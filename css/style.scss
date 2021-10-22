@@ -15,16 +15,11 @@ body {
 .header {
 	background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
 		url(../img/bg.png) no-repeat center top / cover;
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	left: 0px;
-	top: 0px;
-	z-index: -1;
+	padding-bottom: 60px;
 }
-/*Header-------------------------------------------------------------------------------------*/
+//Header-------------------------------------------------------------------------------------//
 .navbar {
-	margin-top: 30px;
+	padding-top: 30px;
 	min-height: 33px;
 	display: flex;
 	align-items: center;
@@ -46,6 +41,9 @@ body {
 			margin-left: auto;
 		}
 	}
+	&__nav {
+		position: relative;
+	}
 }
 .menu {
 	padding: 0;
@@ -60,7 +58,10 @@ body {
 		}
 	}
 }
-/*Film-info------------------------------------------*/
+.m-menu {
+	display: none;
+}
+//Film-info------------------------------------------
 .film {
 	display: flex;
 	align-items: center;
@@ -115,12 +116,12 @@ body {
 		margin-right: 14px;
 	}
 }
-
+//Session-----------------------------------------------------------------------------------
 .session {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-top: 67px;
+	margin-top: 150px;
 	padding-top: 49px;
 	padding-bottom: 64px;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -130,6 +131,9 @@ body {
 	display: flex;
 	margin-top: 20px;
 }
+.city-time {
+	margin-top: 35px;
+}
 .day {
 	display: flex;
 	flex-direction: column;
@@ -137,6 +141,7 @@ body {
 	border-radius: 5%;
 	padding: 9px 27px;
 	margin-right: 15px;
+	cursor: pointer;
 	&__month {
 		margin: 0;
 	}
@@ -173,4 +178,251 @@ body {
 	box-sizing: border-box;
 	border-radius: 5px;
 	color: #fff;
+}
+//Main-----------------------------------------------------------------------------------
+.main {
+	margin-top: 63px;
+}
+//Scheme cinema-----------------------------------------------------------------------------------
+.scheme {
+	background: rgba(36, 36, 36, 0.18);
+	border-radius: 10px;
+	path:not(.light) {
+		fill: rgba(255, 255, 255, 0.2);
+		cursor: pointer;
+	}
+	path:not(.light):hover {
+		fill: rgba(255, 255, 255, 0.5);
+	}
+	path.booked,
+	path.booked:hover {
+		fill: rgba(255, 255, 255, 0.05);
+		cursor: not-allowed;
+	}
+	path.active,
+	path.active:hover,
+	path.active-leg {
+		fill: #fe8e05;
+	}
+	&-svg {
+		max-width: 1170px;
+	}
+}
+
+.legend {
+	display: flex;
+	align-items: center;
+	max-width: 1024px;
+	width: 90%;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 28px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	&-label {
+		margin-right: 30px;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 10px;
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+	&-active span {
+		color: #fe8e05;
+	}
+	path.active-leg:hover,
+	path.active-leg {
+		fill: #fe8e05;
+	}
+	path.free-leg:hover,
+	path.free-leg {
+		fill: rgba(255, 255, 255, 0.2);
+	}
+}
+//Buy tiket-----------------------------------------------------------------------------------
+.price {
+	margin-top: 62px;
+	padding-bottom: 40px;
+	line-height: 21px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 52px;
+	&__label {
+		display: block;
+		font-size: 18px;
+	}
+	&__total {
+		margin-top: 12px;
+		line-height: 61px;
+	}
+}
+.button {
+	background: #fe8e05;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+	padding: 24px 52px;
+	text-decoration: none;
+	color: #fff;
+}
+
+//media----------------------------------------------------------------------------------------
+
+@media (max-width: 1200px) {
+	.conteiner {
+		max-width: 960px;
+	}
+	.where-take {
+		width: 200px;
+	}
+}
+@media (max-width: 1000px) {
+	.conteiner {
+		max-width: 700px;
+	}
+	.menu-item {
+		margin-right: 10px;
+	}
+	.where-take {
+		width: 250px;
+	}
+	.time-take {
+		width: 250px;
+	}
+	.session {
+		flex-direction: column;
+		align-items: center;
+		&-date,
+		&__time,
+		&__city {
+			margin-top: 20px;
+		}
+	}
+}
+@media (max-width: 750px) {
+	.conteiner {
+		max-width: 500px;
+	}
+	.navbar__logo img {
+		margin-right: 0;
+	}
+	.menu {
+		position: absolute;
+		left: 0;
+		top: 40px;
+		flex-direction: column;
+		padding: 20px;
+		margin-left: 20px;
+		background-color: #621402;
+		z-index: 9;
+		border-radius: 10px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(-100%);
+		transition: opacity 0.5s;
+		&-item:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	.m-menu {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		display: block;
+		margin-left: 10px;
+		width: 40px;
+		height: 40px;
+	}
+	.is-open {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+	}
+	.day {
+		padding: 9px 10px;
+	}
+}
+@media (max-width: 550px) {
+	.conteiner {
+		max-width: 350px;
+	}
+	.film {
+		flex-direction: column;
+	}
+	.play-button {
+		margin-top: 30px;
+		img {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	.price {
+		font-size: 25px;
+	}
+	.price__label {
+		font-size: 14px;
+	}
+	.button {
+		font-size: 14px;
+		white-space: nowrap;
+		padding: 20px 25px;
+	}
+}
+@media (max-width: 400px) {
+	.conteiner {
+		width: 250px;
+	}
+	.film-name__ru {
+		font-size: 25px;
+	}
+	.film-name__en {
+		font-size: 18px;
+	}
+	.film-description {
+		display: none;
+	}
+	.session {
+		margin: 0 auto;
+	}
+	.price {
+		flex-direction: column;
+		align-items: flex-start;
+		&-tag {
+			margin-bottom: 15px;
+		}
+	}
+	.film {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+	}
+}
+@media (max-width: 350px) {
+	.conteiner {
+		width: 200px;
+	}
+	.more-info {
+		flex-direction: column;
+	}
+	.raiting {
+		margin-top: 15px;
+	}
+	.play-button {
+		margin-top: 10px;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	.block {
+		display: grid;
+		grid-template-columns: 70px 70px;
+	}
+	.where-take {
+		width: 150px;
+	}
+	.time-take {
+		width: 150px;
+	}
 }
